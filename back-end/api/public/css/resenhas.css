@@ -1,0 +1,52 @@
+body {
+	padding: 1em;
+	font-family: Raleway, sans-serif;
+	background-image: repeating-linear-gradient(-45deg, #f9f9f9, #f9f9f9 25px, transparent 25px, transparent 45px);
+}
+
+main {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+.resenhas p {
+	text-align: justify;
+	
+}
+
+.componente-avaliacao {
+	padding: 30px;
+	border: silver solid 2px;
+}
+
+#comment {
+	padding: 3px 50px;
+	width: 70%;
+}
+
+.resenhas {
+	padding: 50px;
+}
+
+
+#msg {
+	padding: 100px;
+	vertical-align: middle;
+}
+
+#img-file {
+	margin: 15px 0;
+}
+
+img {
+	max-width: 70%;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}

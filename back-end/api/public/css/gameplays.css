@@ -1,0 +1,36 @@
+body {
+	padding: 1em;
+	font-family: Raleway, sans-serif;
+	background-image: repeating-linear-gradient(-45deg, #f9f9f9, #f9f9f9 25px, transparent 25px, transparent 45px);
+}
+
+main {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* fraction*/
+  margin: 30px;
+}
+
+.componente-video {
+	margin: 30px;
+}
+
+.meus-videos .componente-video {
+  display: flex;
+}
+
+
+h1 {
+	text-align: center;
+}
+
+#gameplay-file {
+	margin: 15px 0;
+}
+

@@ -1,0 +1,44 @@
+<header>
+    <nav class="row navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <div class="logo col-5">
+          <img class="spiel-logo" src="images/spielshiffLogo.svg" alt="Logomarca da Spielshiff">
+          <h1>SpielShiff</h1>
+        </div>
+        <button id="btn-collapse" class="navbar-toggler navbar-light m-5" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2  mb-lg-0">
+            <li class="nav-item ml-5">
+              <a id="nav1" aria-current="page" href="/">Home</a>
+            </li>
+            {{#if isUserAuthenticated}}
+            <li class="nav-item">
+              <a id="nav2" href="perfil" onclick="navbarColor()">Perfil</a>
+            </li>
+            <li class="nav-item">
+              <a id="nav3" href="library">Biblioteca</a>
+            </li>
+            {{/if}}
+            <li class="nav-item">
+              <a id="nav4" href="news">News</a>
+            </li>
+          </ul>
+          {{#if isUserAuthenticated}}
+            <div class="col-4 d-flex justify-content-end">
+              <button id="id_btn-logado" class="btn-sing-in" type="button" >M</button>
+            </div>
+          {{else}}
+            <div class="col-4 d-flex justify-content-end">
+              <button id="id_btn-sing-in" class="btn-sing-in" type="button" onclick="id_btn_login()">Sign In</button>
+            </div>
+          {{/if}}
+
+          
+        </div>
+      </div>
+    </nav>
+  </header>
