@@ -1,4 +1,6 @@
 # Super Loja
+link para o git : https://github.com/mphillipecarmo/super-loja.git
+
 
 Trabalho realizado para a diciplina de WEB
 
@@ -31,3 +33,12 @@ Questão 2) Back-end: (70% da nota)
 • Poderá ser utilizado camada de dados RESTful ok
 
 • Permitir Upload de imagens dos produtos ok(Uploade de imagems dos produtos) 
+
+#Para rodar
+Será necessario o docker e o node.
+Na pasta back-end/db:
+    docker build . -t superloja
+    docker-compose up -d
+na pasta API:
+    npm install
+    npm start
