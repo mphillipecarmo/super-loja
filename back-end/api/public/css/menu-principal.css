@@ -16,7 +16,9 @@
   position: relative;
   cursor: pointer;
 }
-
+#nav-header{
+  background-color: var(--nav-bg);
+}
 #menu-principal li:hover {
   background-color: var(--body-bg);
 }

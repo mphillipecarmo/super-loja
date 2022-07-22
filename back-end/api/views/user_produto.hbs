@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>A Super Loja</title>
+  <link rel="icon" href="/imgs/favicon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/menu-principal.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div id="container">
+    ola terraqueos
+    <main>
+      <section>
+        <form action="/adicionar_produto" method="post" enctype="multipart/form-data">
+          <input id="load-image" class="form-control mt-4" type="file" name="file"><br>
+
+          <div>
+            <label for="product_name" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="product_name" name="product_name">
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+          </div>
+          <div>
+            <label for="product_desc" class="form-label">Descricao</label>
+            <input type="text" class="form-control" id="product_desc" name="product_desc">
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+          </div>
+          <div class="d-flex justify-content-end">
+            <input type="submit" id="btn_singup" class="col-5 my-4 btn-login">
+          </div>
+        </form>
+
+      </section>
+
+    </main>
+
+    <footer>
+      <p>Melhor. Loja. Ever.</p>
+    </footer>
+    </container>
+    <script src="/js/menu.js" charset="utf-8"></script>
+</body>
+
+</html>

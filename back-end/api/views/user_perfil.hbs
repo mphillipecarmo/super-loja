@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>A Super Loja</title>
+  <link rel="icon" href="/imgs/favicon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/menu-principal.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div id="container">
+    ola terraqueos
+    {{#if perfil_user}}
+     {{#each perfil_user}}
+    <div>
+      <form action="alterar_senha" method="POST">
+        <h3>Name: {{usr_name}}</h3>
+        <h3>Email: {{usr_email}}</h3>
+        <h3>User name : {{usr_uname}}</h3>
+        <input type="text" placeholder="Senha Atual">
+        <input type="text" placeholder="Nova Senha">
+        <button type="submit" id="atualizarsenha">Atualizar senha</button>
+      </form>
+
+    </div>
+    {{/each}}
+    {{/if}}
+    
+    <main>
+      {{#if perfil_productlist}}
+
+      <section>
+        <h2>Novos produtos</h2>
+
+        <div id="produtos">
+          {{#each perfil_productlist}}
+          <article>
+            <img src={{product_img}}>
+            <h3>{{product_name}}</h3>
+            <p>{{product_description}}</p>
+          </article>
+          {{/each}}
+        </div>
+
+      </section>
+
+      {{/if}}
+    </main>
+
+    <a href="/user_produto">
+      <button>Adionar Produto</button>
+    </a>
+
+    </container>
+    <script src="/js/menu.js" charset="utf-8"></script>
+</body>
+
+</html>

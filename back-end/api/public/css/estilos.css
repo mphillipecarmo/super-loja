@@ -1,14 +1,11 @@
 :root {
   --font-color: rgb(0, 0, 0);
   --body-bg: #ffffff;
+  --nav-bg: #d8d8d8;
   --body-color: rgb(144, 203, 86);
   --link-color: rgb(49, 167, 25);
   --link-color-hover: #ec5840;
 }
-
-
-
-
 
 body {
   font-family: 'Open Sans Condensed', sans-serif;

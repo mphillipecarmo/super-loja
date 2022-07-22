@@ -1,0 +1,16 @@
+version: "3"
+services:
+  db:
+    image: superloja
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "1"
+          memory: 50M
+      restart_policy:
+        condition: always
+    ports:
+      - "3306:3306"
+
+

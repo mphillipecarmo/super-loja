@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>A Super Loja</title>
+  <link rel="icon" href="/imgs/favicon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/menu-principal.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div id="container">
+    
+    <main>
+      {{#if productlist}}
+     
+        <section>
+            <h2>Novos produtos</h2>
+         
+            <div id="produtos">
+            {{#each productlist}}
+              <article>
+                <img src={{product_img}}>
+                <h3>{{product_name}}</h3>
+                <p>{{product_description}}</p>
+              </article>
+             {{/each}}
+            </div>
+            
+        </section>
+     
+      {{/if}}
+      <aside>
+        <h2>Inscreva-se</h2>
+        <p>Não esqueça seu email para que possamos "floodá-lo" com um monte de coisas que você não quer comprar.</p>
+        <a href="/cadastrar">
+          <button>Inscreva-se</button>
+        </a>
+          <br>
+          <br>
+                <a href="/login">
+          <button>Entrar</button>
+        </a>
+      </aside>
+
+
+    </main>
+    
+    </container>
+    <script src="/js/menu.js" charset="utf-8"></script>
+</body>
+
+</html>
