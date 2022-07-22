@@ -1,5 +1,7 @@
 # Super Loja
 link para o git : https://github.com/mphillipecarmo/super-loja.git
+link para a pasta com imagens: https://drive.google.com/drive/folders/1un-xQJgY2ptQpXrmpYHb37YlLrMbiZY6?usp=sharing
+
 
 Nome: Marcos Phillipe Mendes do Carmo
 Email: m.phillipe.acad@gmail.com
@@ -29,8 +31,9 @@ Questão 2) Back-end: (70% da nota)
 
 • As senhas devem ser persistidas no banco usando algum algoritmo de criptografia de via única. ok
 
+• O usuário poderá inserir novos produtos, excluir os já existentes. ok
 
-• O usuário poderá inserir novos produtos, excluir e alterar os já existentes. ok
+•O usuario pode alterar sua senha
 
 • Poderá ser utilizado camada de dados RESTful ok
 
