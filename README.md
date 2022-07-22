@@ -1,6 +1,8 @@
 # Super Loja
 link para o git : https://github.com/mphillipecarmo/super-loja.git
 
+Nome: Marcos Phillipe Mendes do Carmo
+Email: m.phillipe.acad@gmail.com
 
 Trabalho realizado para a diciplina de WEB
 
