@@ -20,12 +20,13 @@
     {{#if perfil_user}}
      {{#each perfil_user}}
     <div>
-      <form action="alterar_senha" method="POST">
+      <form action="/alterar_senha" method="POST">
         <h3>Name: {{usr_name}}</h3>
         <h3>Email: {{usr_email}}</h3>
         <h3>User name : {{usr_uname}}</h3>
-        <input type="text" placeholder="Senha Atual">
-        <input type="text" placeholder="Nova Senha">
+        <input type="text" class="form-control" id="usr_email" name="usr_email" value="{{usr_email}}">
+        <input  id="product_idsenha" type="text" placeholder="Senha Atual"  name="senha">
+        <input  id="product_idnovasenha" type="text" placeholder="Nova Senha"  name="novasenha">
         <button type="submit" id="atualizarsenha">Atualizar senha</button>
       </form>
 
@@ -45,6 +46,14 @@
             <img src={{product_img}}>
             <h3>{{product_name}}</h3>
             <p>{{product_description}}</p>
+
+            <form action="/apagar_produto" method="POST">
+              <div class="mb-3 col-4 p-2">
+                    <input type="text" class="form-control" id="product_id" name="product_id" value="{{product_id}}">
+                    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+              </div>
+              <button type="submit" id="apagar" value="{{product_id}}" >Deletar</button>
+            </form>
           </article>
           {{/each}}
         </div>

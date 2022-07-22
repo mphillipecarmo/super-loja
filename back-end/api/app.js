@@ -18,7 +18,6 @@ import cors from 'cors';
 // de forma a tornar o código do projeto organizado
 import register from './routes/authRoute.js';
 import index from './routes/index.js';
-import produto from './routes/addProduto.js';
 
 
 const app = express();

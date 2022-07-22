@@ -189,7 +189,7 @@ router.get('/user_produto', async (req, res, next) => {
 
 router.post('/adicionar_produto', multer(multerConfig).single('file'), async (req, res) => {
     console.log(req.file);
-    
+
     let usrId = req.cookies.superloja_usr_id;
     const { originalname: name, size, key, location: url = "", filename } = req.file;
     const { product_name, product_desc } = req.body;
@@ -204,5 +204,67 @@ router.post('/adicionar_produto', multer(multerConfig).single('file'), async (re
         console.log(error);
     }
 });
+
+router.post('/apagar_produto', async (req, res) => {
+    const { product_id } = req.body;
+    console.log(req.body)
+    console.log(product_id)
+
+    try {
+        const [insertPub] = await db.execute(`DELETE FROM loja.product WHERE product_id=${product_id}`);
+
+        res.redirect('/perfil')
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+
+
+router.post('/alterar_senha', async (req, res, next) => {
+    try {
+        const { usr_email, senha, novasenha } = req.body;
+        let usrId = req.cookies.superloja_usr_id;
+        //Se o user ou pass estiverem vazios retornar erro
+
+        const [findOne] = await db.execute(`SELECT * FROM loja.user WHERE usr_id="${usrId}"`);
+
+        if (!findOne || findOne === '')
+            throw new error("User not found");
+
+        if (!await bcrypt.compare(senha, findOne[0].senha))
+            throw new error("Invalid password");
+
+
+        console.log("oi")
+        let hash = '';
+        if (novasenha === novasenha) {
+            hash = await bcrypt.hash(novasenha, 10);
+        } else throw new error("Senhas não conferem");
+
+        const [user] = await db.execute(`UPDATE loja.user SET usr_password = ${novasenha} WHERE usr_id="${usrId}"`)
+
+        if (!user || user.affectedRows < 1) {
+            throw new Error('Não foi alterado')
+        }
+
+
+
+        findOne[0].password = undefined;
+        
+        const token = jwt.sign({ id: findOne[0].usr_id }, authConfig.secret, { expiresIn: 86400 });
+
+        res.cookie("superloja", 'Bearer ' + token, { maxAge: 900000 })
+        res.cookie("superloja_usr_id", findOne[0].usr_id, { maxAge: 900000 })
+        'Bearer ' + token,
+
+            res.redirect('/perfil')
+
+    } catch (error) {
+        console.log(error)
+    }
+
+
+})
 
 export default router
