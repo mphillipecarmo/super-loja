@@ -15,13 +15,19 @@ melhor experiência para o usuário. - ok
 • Processo de build para assets do front-end:
 
 o Minimizar arquivos CSS e JS - ok (minimizado utilizando o cleancss)
+
 o Eliminação de código morto JS
+
 Questão 2) Back-end: (70% da nota)
 • Conexão com Banco de Dados (Criar um banco de dados com as tabelas: Produto e Usuário) ok (MySql - utilizando o docker )
+
 • Usuários devem ser cadastrados e autenticados para realizar as funções de “admin” do site.(Usuarios Logados(token no cookie) pode adicionar e remover produtos)
-• As senhas devem ser persistidas no banco usando algum algoritmo de criptografia de via
-única. ok
+
+• As senhas devem ser persistidas no banco usando algum algoritmo de criptografia de via única. ok
+
 
 • O usuário poderá inserir novos produtos, excluir e alterar os já existentes. ok
+
 • Poderá ser utilizado camada de dados RESTful ok
+
 • Permitir Upload de imagens dos produtos ok(Uploade de imagems dos produtos) 
