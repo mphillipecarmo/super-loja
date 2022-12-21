@@ -12,3 +12,7 @@ jobs:
       with:
         source: "README.md"
         target: "docs/README.md"
+    - id: git_commit
+      uses: zwaldowski/git-commit-action@v1
+    - run: echo "${{ steps.git_commit.outputs.sha }}"
+    
