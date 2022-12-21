@@ -1,4 +1,4 @@
-# Super Loja
+# Super Loja 2
 link para o git : https://github.com/mphillipecarmo/super-loja.git
 link para a pasta com imagens: https://drive.google.com/drive/folders/1un-xQJgY2ptQpXrmpYHb37YlLrMbiZY6?usp=sharing
 
